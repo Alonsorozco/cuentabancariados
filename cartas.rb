@@ -9,6 +9,6 @@ class Card
     end
 end
 
-c1 = Card.new
+a = Card.new
 
-pp c1
+pp a
