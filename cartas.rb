@@ -1,14 +1,14 @@
 
-class Carta
-    attr_accessor :numero, :pinta
-    def initialize(numero= 1,pinta = 'C')
-        @numero = numero
-        @pinta = pinta
-        numero=Random.rand(1...13) 
-        pinta=['C', 'D', 'T', 'E'].sample
+class Card
+    attr_accessor :number, :kind
+    def initialize(number= 1,kind = 'C')
+        @number = number
+        @kind = kind
+        number=Random.rand(1...13) 
+        kind=['C', 'D', 'T', 'E'].sample
     end
 end
 
-c1 = Carta.new
+c1 = Card.new
 
 pp c1
