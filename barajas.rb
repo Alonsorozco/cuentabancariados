@@ -1,36 +1,36 @@
 require_relative "cartas"
 
-class Baraja
-    attr_accessor :cartas
+class Deck
+    attr_accessor :card
     def initialize
-    @cartas = []
+    @card = []
     number = Array(1..13)
         kind   = %w[C D T E]
             number.each do |n|
                 kind.each do |k|
-                cartas.push Card.new(n,k)
+                card.push Card.new(n,k)
                 end
             end
     end
 
-    def barajar
-        cartas.shuffle
+    def shuffle
+        card.shuffle
     end
 
-    def sacar
-        cartas.pop
+    def take_out
+        card.pop
     end
 
-    def repartir_mano
-        cartas.pop(5)
+    def report_hand
+        card.pop(5)
     end
 
 end
 
-a = Baraja.new
+a = Deck.new
 pp '-------'
-pp a.repartir_mano
+pp a.report_hand
 pp '-------'
-pp a.sacar
+pp a.take_out
 pp '-------'
-pp a.barajar
+pp a.shuffle
