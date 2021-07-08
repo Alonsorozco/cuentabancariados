@@ -5,7 +5,7 @@ class Card
         @number = number
         @kind = kind
         number=Random.rand(1...13) 
-        kind=['C', 'D', 'T', 'E'].sample
+        kind=%w[C D T E].sample
         @number = number
         @kind = kind
     end

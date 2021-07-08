@@ -28,4 +28,9 @@ class Baraja
 end
 
 a = Baraja.new
+pp '-------'
 pp a.repartir_mano
+pp '-------'
+pp a.sacar
+pp '-------'
+pp a.barajar
